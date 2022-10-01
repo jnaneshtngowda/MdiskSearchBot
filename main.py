@@ -25,7 +25,7 @@ User = Client(
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
-	await event.reply_photo("https://te.legra.ph/file/22807efac2ff09d4be927.jpg",
+	await event.reply_photo("https://te.legra.ph/file/50276889b7b4de006cff5.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
                                     [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
@@ -39,7 +39,7 @@ async def help_handler(_, event: Message):
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
-             InlineKeyboardButton("Our Group", url="https://t.me/+YBZWT_z_UNNiYjk1"), 
+             InlineKeyboardButton("Our Group", url="https://t.me/rockersmoviejnaneshgroup"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )

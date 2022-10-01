@@ -25,11 +25,11 @@ User = Client(
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
-	await event.reply_photo("https://telegra.ph/file/165941ae764a56d6d9c89.jpg",
+	await event.reply_photo("https://te.legra.ph/file/22807efac2ff09d4be927.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("Our Channel", url="https://t.me/cynitemovies"),
-                                     InlineKeyboardButton("Creator", url="https://t.me/Cyniteofficial")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+                                     InlineKeyboardButton("Creator", url="https://t.me/alonekingjnanesh")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
@@ -38,8 +38,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-             InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+             InlineKeyboardButton("Our Group", url="https://t.me/+YBZWT_z_UNNiYjk1"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -48,7 +48,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    answers = f'****'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -77,11 +77,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies"),
-						InlineKeyboardButton("Join", url="https://t.me/Technicalcynite")
+						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
+						InlineKeyboardButton("Join", url="https://t.me/rockersbackup")
 					],
 					[
-						InlineKeyboardButton("Creator", url="https://t.me/cyniteofficial"),
+						InlineKeyboardButton("Creator", url="https://t.me/alonekingjnanesh"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -96,10 +96,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies")
+						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/cyniteofficial"),
+						InlineKeyboardButton("Owner", url="https://t.me/alonekingjnanesh"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -117,8 +117,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/cyniteofficial"),
-						InlineKeyboardButton("Channel", url="https://t.me/cynitemovies")
+						InlineKeyboardButton("Support", url="https://t.me/rockersbackup"),
+						InlineKeyboardButton("Channel", url="https://t.me/rockersbackup")
 					]
 				]
 			),
